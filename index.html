@@ -2,40 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>InventVerts</title>
+    <title>Inventverts</title>
     <style>
         body {
-            margin: 0;
             background-color: #000;
-        }
-
-        #containter {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            height: 100vh;
+            font-family: Courier,serif;
         }
 
         h1 {
             font-size: 6em;
         }
 
-        .invent {
-            color: #00FF00;
-            font-family: Courier;
-            font-weight: lighter;
-        }
-
-        .verts {
+        #typed-strings, #typed {
             color: #f0f0f0;
-            font-family: Palatino;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 </head>
 <body>
-<div id="containter">
-    <h1><span class="invent">invent</span><span class="verts">VERTS</span></h1>
+<div id="typed-strings">
+    <p><em>Invent</em>ing the ad<strong>verts</strong></p>
+    <p><em>Invent</em><strong>verts</strong></p>
 </div>
+<span id="typed"></span>
+<script>
+    var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 40,
+        backDelay: 2000,
+        smartBackspace: true,
+        loop: true
+    });
+</script>
 </body>
 </html>
